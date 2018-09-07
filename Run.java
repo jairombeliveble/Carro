@@ -10,7 +10,7 @@ public class Run {
 		System.out.println("\t VRUUNNN!!!! - Carro ligado.");
 		System.out.println("Digite uma instrução (help = cmd list.).");
 		while (normalCar.power) {
-			System.out.print("User$\t");
+			System.out.print("User$:\t");
 			String cmd = keyboard.nextLine();
 		
 			if (cmd.equals("help")) {
@@ -18,19 +18,15 @@ public class Run {
 						+ "||\t in  = Entrar 1 pessoa.\n"
 						+ "||\t out  = Sai 1 pessoa.\n"
 						+ "||\t run + Quantidade(x) = Andar x quilometros.\n"
-						+ "||\t gasFull + Quantidade(x) = Abastece x litros.\n"
+						+ "||\t supply + Quantidade(x) = Abastece x litros.\n"
 						+ "||\t status = Mostra Quantidades de pessoa, gasolina e Kilômetos.\n"
-						+ "||\t turnOff = encerra");
+						+ "||\t turnOff = Encerra");
 			}else if(cmd.equals("status")){
 				System.out.println("\t" + "Pessoas: " + normalCar.people + " gasolina: " + normalCar.gas + " kilômetros: " + normalCar.kilometer 
 						+ " Carro ligado: " + normalCar.power);
 			} else {
 				
 				String info[] = cmd.split(" ");//[cmd,qtd]
-			
-				//for (int i = 0;i < info.length;i++) {
-					//System.out.println(info[i]);				
-				//}
 			
 				switch (info[0]){
 					case ("in"):
