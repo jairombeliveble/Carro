@@ -33,7 +33,6 @@ public class Car {
 		if(this.gas > 0 && this.people > 0 ) {
 			int x = Integer.parseInt(dist);
 			this.kilometer += x;
-			this.people -= 1;
 			
 			x = x/10;
 			this.gas -= x;
